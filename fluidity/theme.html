@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:og="http://ogp.me/ns#" xml:lang="en" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+			
+	<!-- Title -->
+	<title>{Title} {block:SearchPage}- {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}- {PostSummary}{/block:PostSummary}{block:IndexPage}- {Description}{/block:IndexPage}</title>
+	
+	<!-- Description -->
+	{block:Description}
+	<meta name="description" content="{MetaDescription}" />
+	{/block:Description}
+	
+	<!-- Fav and touch icons -->
+	<link rel="shortcut icon" href="{Favicon}" />
+	<link rel="apple-touch-icon" href="{PortraitURL-128}" />
+			
+	<!-- Meta -->       
+	<meta name="image:Logo 200x200" content="http://static.tumblr.com/1da4c0364d079cec028d813341a16432/mc0vkei/5mhmngveo/tumblr_static_logo-200.png" />
+	<meta name="image:Logo Retina 400x400" content="" />
+	<meta name="image:Background" content="" />
+	<meta name="color:Background" content="#FFF" />
+	<meta name="color:Content Background" content="#FFF" />
+	<meta name="color:Border Colour" content="#e3e3e3" />
+	<meta name="color:Button Colour" content="#43A8EF"/>
+	<meta name="color:Button Hover Colour" content="#65B7F0" />
+	<meta name="color:Button Text Colour" content="#FFF" />
+	<meta name="color:Button Hover Text Colour" content="#FFF" />
+	<meta name="color:Blog Name Colour" content="#282828" />
+	<meta name="color:Description Colour" content="#282828" />
+	<meta name="color:Link Colour" content="#43A8EF" />
+	<meta name="color:Hover Colour" content="#1e5d97" />		
+	<meta name="color:Navigation Colour" content="#7f7f7f" />
+	<meta name="color:Text Colour" content="#282828" />
+	<meta name="color:Post Title Colour" content="#282828" />
+	<meta name="text:Google Analytics ID" content="" />
+	<meta name="text:Disqus Shortname" content="" />
+	<meta name="text:Twitter Username" content="" />
+	<meta name="text:AboutMe URL" content="" />
+	<meta name="text:Facebook URL" content="" />
+	<meta name="text:Google Plus URL" content="" />
+	<meta name="text:Instagram URL" content="" />
+	<meta name="text:LinkedIn URL" content="" />
+	<meta name="text:Pinterest URL" content="" />
+	<meta name="text:Twitter URL" content="" />
+	<meta name="text:YouTube URL" content="" />
+	<meta name="text:Website URL" content="" />	
+	<meta name="text:Following Section" content="Blogs I Follow:" />
+	<meta name="text:Likes Section" content="My Likes:" />
+	<meta name="if:Show Social Network Icons" content="1" />
+	<meta name="if:Enable Comment Count" content="1" />
+	<meta name="if:Show Likes" content="0" />
+	<meta name="if:Show Blogs I Follow" content="0" />
+	<meta name="if:Show Blog Title" content="1" />
+	<meta name="if:Centre Layout" content="1" />
+	<meta name="font:Body" content="Helvetica Neue" />
+	<meta name="font:Title" content="Gibson" />	
+	<meta name="select:Body Font Size" content="14px" title="Regular" />	
+	<meta name="select:Body Font Size" content="12px" title="Small" />        
+	<meta name="select:Body Font Size" content="16px" title="Large" />
+	<meta name="select:Title Font Weight" content="400" title="Normal" />
+	<meta name="select:Title Font Weight" content="700" title="Bold" />
+	<meta name="select:Header Position" content="top" title="Top" />
+	<meta name="select:Header Position" content="sidebar" title="Side" />
+	
+	<!-- Facebook Open Graph -->
+	<meta property="og:site_name" content="{Title}"/>
+	{block:PermalinkPage}
+		<meta property="og:url" content="{Permalink}"/>
+		<meta property="og:type" content="article"/>
+		{block:Posts}
+			{block:Text}
+				{block:Title}
+					<meta property="og:title" content="{PlaintextTitle}"/>
+				{/block:Title}
+				<meta property="og:description" content="{PlaintextBody}"/>
+				<meta property="og:image" content="{PortraitURL-128}"/>
+			{/block:Text}
+			{block:Photo}
+				<meta property="og:image" content="{PhotoURL-500}"/>
+				{block:Caption}
+					<meta property="og:description" content="{PlaintextCaption}"/>
+				{/block:Caption}
+			{/block:Photo}
+			{block:Photoset}
+				{block:Photos}
+					<meta property="og:image" content="{PhotoURL-500}"/>
+				{/block:Photos}
+				{block:Caption}
+					<meta property="og:description" content="{PlaintextCaption}"/>
+				{/block:Caption}
+			{/block:Photoset}
+			{block:Quote}
+				<meta property="og:title" content="{PlaintextQuote}"/>
+				<meta property="og:description" content="{PlaintextSource}"/>
+				<meta property="og:image" content="{PortraitURL-128}"/>
+			{/block:Quote}
+			{block:Link}
+				<meta property="og:title" content="{PlaintextName}"/>
+				<meta property="og:description" content="{PlaintextDescription}"/>
+				<meta property="og:image" content="{PortraitURL-128}"/>
+			{/block:Link}
+			{block:Chat}
+				<meta property="og:title" content="{PlaintextTitle}"/>
+				<meta property="og:description" content="{block:Lines}{block:Label}{Label}: {/block:Label}{Line} &bull; {/block:Lines}"/>
+				<meta property="og:image" content="{PortraitURL-128}"/>
+			{/block:Chat}
+			{block:Audio}
+				<meta property="og:title" content="{block:Artist}{Artist} - {/block:Artist}{block:TrackName}{TrackName}{/block:TrackName}"/>
+				<meta property="og:description" content="{PlaintextCaption}"/>
+				{block:AlbumArt}
+					<meta property="og:image" content="{AlbumArtURL}"/>
+				{/block:AlbumArt}
+			{/block:Audio}
+			{block:Video}
+				{block:Caption}
+					<meta property="og:description" content="{PlaintextCaption}"/>
+				{/block:Caption}
+			{/block:Video}
+			{block:Answer}
+				<meta property="og:title" content="{PlaintextQuestion}"/>
+				<meta property="og:description" content="{PlaintextAnswer}"/>
+				<meta property="og:image" content="{PortraitURL-128}"/>
+			{/block:Answer}
+		{/block:Posts}
+	{/block:PermalinkPage}
+	{block:IndexPage}
+		<meta property="og:title" content="{Title}"/>
+		<meta property="og:type" content="blog"/>
+		<meta property="og:description" content="{MetaDescription}"/>
+		<meta property="og:image" content="{PortraitURL-128}"/>
+	{/block:IndexPage}      
+	  
+	<!-- CSS -->
+	<link rel="stylesheet" href="http://www.aljtmedia.com/uploads/tumblrTheme.css" />
+	
+	<!-- Canonical URL -->
+	{block:PermalinkPage}
+		<link rel="canonical" href="{Permalink}">
+	{/block:PermalinkPage}
+	
+	<!-- Custom CSS -->
+	<style>
+		body {
+			font-family: {font:Body};
+			font-size: {select:Body Font Size};
+			background: {color:Background};
+			{block:IfBackgroundImage}
+			background-image: url('{image:Background}');
+		    {/block:IfBackgroundImage}
+		}
+		a {
+			color: {color:Link Colour};
+		}
+		a:hover {
+			color: {color:Hover Colour};  
+		}
+		h1, h2, h3, h4 {
+			font-family: {font:Title};
+			font-weight: {select:Title Font Weight};
+		}
+		header.globalHeader .logo .image {
+			background-image: url("{image:Logo 200x200}");
+		}
+		header.globalHeader .title h1 {
+			color: {color:Blog Name Colour};
+		}
+		header.globalHeader .description {
+			color: {color:Description Colour};
+		}
+		header.globalHeader .description a {
+			color: {color:Link Colour};
+		}			
+		header.globalHeader .description a:hover {
+			background-color: {color:Hover Colour};
+		}
+		header.globalHeader .pageNavigation a {
+			color: {color:Navigation Colour};
+		}
+		header.globalHeader .pageNavigation a:hover {
+			color: {color:Button Colour};
+		}
+		#main {
+		    background: {color:Content Background};
+		    border-left: 1px solid {color:Border Colour};
+		}
+		#main article.post {
+		    border-top: 1px solid {color:Border Colour};
+		}
+		#main article.post .content ol.notes {
+		    border-bottom: 1px solid {color:Border Colour};
+		}
+		#main article.post .content ol.notes li.note {
+	        border-top: 1px solid {color:Border Colour};
+		}
+		#main article.post .date a, 
+		#main article.post .date a:visited {
+			color: {color:Button Text Colour};
+			background: {color:Button Colour};
+		}			
+		#main article.post .date a:hover {
+			color: {color:Button Hover Text Colour};
+			background: {color:Button Hover Colour};
+		}			
+		header.globalHeader .description,
+		header.globalHeader .pageNavigation,
+		header.globalHeader .pageNavigation a,
+		#main article.post .content .text,
+		#main article.post .content ol.notes li.note {
+			color: {color:Text Colour};
+			font-size: {select:Body Font Size};
+		}
+		#main article.post .content .text img {
+			background-image: url("{PhotoURL-HighRes}");
+		}
+		#main article.post .content .text a, 
+		#main article.post .content .text a:visited {
+			color: {color:Link Colour};
+		}
+		#main footer.developer a:hover,
+		#main article.post .content .text a:hover {	
+			color: {color:Hover Colour};  
+		}
+		#main article.post .content .text h2 {
+			color: {color:Navigation Colour};
+		}			
+		#main article.post .content .text h2 a, 
+		#main article.post .content .text h2 a:visited {
+			color: {color:Navigation Colour};
+		}
+		#main article.post .content .text h2 a:hover {
+			color: {color:Hover Colour};
+		}
+		#main article.post .content .text li {
+			color: {color:Text Colour};
+			font-size: {select:Body Font Size};
+		}
+		#main article.post .content blockquote {
+			border-left: solid 4px {color:Link Colour};
+		}
+		.following .title,
+		#main article.post .content .title,
+		#main article.post .content .title a,
+		#main article.post .content .quote {
+			color: {color:Post Title Colour};
+			font-family: {font:Title};
+			font-weight: {select:Title Font Weight};
+		}
+		#main article.post .content .audiocaption {
+			color: {color:Text Colour};
+		}
+		#main article.post .content footer.details ul li a {
+			color: {color:Link Colour};
+		}
+		#main article.post .content footer.details ul li a:hover {
+			color: {color:Hover Colour};
+		}
+		#pagination .prev a, 
+		#pagination .next a {
+			background: {color:Button Colour};
+			color: {color:Button Text Colour};
+		}
+		#pagination .prev a:hover, 
+		#pagination .next a:hover {
+			background: {color:Button Hover Colour};
+			color: {color:Button Hover Text Colour};
+		}	
+		.button { 
+			background-color: {color:Button Colour}; 
+		}
+		.button:hover { 
+			background-color: {color:Button Hover Colour}; 
+		}
+		{block:IfCentreLayout}
+		body.page-sidebar {
+		    margin: 0 0 0 300px;
+		}
+		body.page-sidebar header.globalHeader.sidebar { 
+		    left: 0;
+		}
+		body.page-sidebar #main {
+		    margin: 0 auto;
+		}
+		#main article.post .content ol.notes li.note span.action {
+        	font-weight: {select:Title Font Weight};
+        }
+		{/block:ifCentreLayout}
+		
+		/* Retina Displays ----------- */ 
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+			header.globalHeader .logo .image {
+				background-image: url("{image:Logo Retina 400x400}");
+			}
+		}			
+		{CustomCSS}
+	</style>
+</head>
+<body class="page-{select:Header Position}">        
+	        
+	<!-- Global Header -->
+	<header class="globalHeader {select:Header Position}">
+	
+	    <!-- Logo -->
+		<div class="logo">
+			<a href="/" title="{Title}">
+				<div class="image">&nbsp;</div>
+			</a>
+		</div>
+		
+		<!-- Main Content -->
+		<aside class="content">
+		    
+		    <!-- Blog Title -->
+		    {block:IfShowBlogTitle}
+		    <div class="title">
+    			<a href="/" title="{Title}">
+    				<h1>{Title}</h1>
+    			</a>
+			</div>
+			{/block:IfShowBlogTitle}
+			
+			<!-- Blog Description -->
+    		<div class="description">
+    			{Description}
+    		</div>
+    		
+    		<!-- Page Navigation -->
+    		<nav class="pageNavigation">
+    	        <ul class="clearfix">
+    			{block:HasPages}{block:Pages}<li><a href="{url}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+    			{block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
+    			{block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
+    			</ul>
+    		</nav>
+    		
+    		<!-- Links -->
+    		<div class="feature clearfix">
+    			{block:IfShowSocialNetworkIcons}
+    			<ul class="networks">
+    				{block:IfAboutMeURL}
+    				<li class="service aboutme">
+    					<a class="icon button" href="{text:AboutMe URL}" target="_blank" title="About.me">
+    						<span class="asset">About.me</span>
+    					</a>
+    				</li>
+    				{/block:IfAboutMeURL}					
+    				{block:IfFacebookURL}
+    				<li class="service facebook">
+    					<a class="icon button" href="{text:Facebook URL}" target="_blank" title="Facebook">
+    						<span class="asset">Facebook</span>
+    					</a>
+    				</li>
+    				{/block:IfFacebookURL}			
+    				{block:IfGooglePlusURL}
+    				<li class="service googleplus">
+    					<a class="icon button" href="{text:Google Plus URL}" target="_blank" title="Google+">
+    						<span class="asset">Google+</span>
+    					</a>
+    				</li>
+    				{/block:IfGooglePlusURL}
+    				{block:IfInstagramURL}
+    				<li class="service instagram">
+    					<a class="icon button" href="{text:Instagram URL}" target="_blank" title="Instagram">
+    						<span class="asset">Instagram</span>
+    					</a>
+    				</li>
+    				{/block:IfInstagramURL}					
+    				{block:IfLinkedInURL}
+    				<li class="service linkedin">
+    					<a class="icon button" href="{text:LinkedIn URL}" target="_blank" title="LinkedIn">
+    						<span class="asset">LinkedIn</span>
+    					</a>
+    				</li>
+    				{/block:IfLinkedInURL}
+    				{block:IfPinterestURL}
+    				<li class="service pinterest">
+    					<a class="icon button" href="{text:Pinterest URL}" target="_blank" title="Pinterest">
+    						<span class="asset">Pinterest</span>
+    					</a>
+    				</li>
+    				{/block:IfPinterestURL}					
+    				{block:IfTwitterURL}
+    				<li class="service twitter">
+    					<a class="icon button" href="{text:Twitter URL}" target="_blank" title="Twitter">
+    						<span class="asset">Twitter</span>
+    					</a>
+    				</li>
+    				{/block:IfTwitterURL}					
+    				{block:IfYouTubeURL}
+    				<li class="service youtube">
+    					<a class="icon button" href="{text:YouTube URL}" target="_blank" title="YouTube">
+    						<span class="asset">YouTube</span>
+    					</a>
+    				</li>
+    				{/block:IfYouTubeURL}
+    				{block:IfWebsiteURL}
+    				<li class="service website">
+    					<a class="icon button" href="{text:Website URL}" target="_blank" title="Website">
+    						<span class="asset">Website</span>
+    					</a>
+    				</li>
+    				{/block:IfWebsiteURL}
+    			</ul>
+    			{/block:IfShowSocialNetworkIcons}
+    		</div>
+    	</aside>
+	</header>
+		
+	<!-- Open: main -->
+	<section id="main">
+	{block:SearchPage}
+	    <article class="post clearfix">
+    	    <section class="content search">
+    	        <div class="title">Search Results for: {SearchQuery}</div>
+        	   <div class="text">
+        	   {block:NoSearchResults}
+                    <p>Your search returned no results.</p>
+        	   {/block:NoSearchResults}
+        	   {block:SearchResults}
+        	        <p>{lang:Your search for SearchQuery returned SearchResultCount results 2}.</p>
+        	   {/block:SearchResults}
+        	   </div>
+    	   </section>
+	   </article>
+	{/block:SearchPage}
+	  
+	{block:Posts}
+		<article class="post clearfix">
+			
+			<!-- Open: date -->
+			<aside class="date">
+				<a href="{Permalink}" class="show-for-small">
+					{block:Date}{DayOfMonth} {Month} {Year}{/block:Date}
+				</a>
+				<article class="show-for-large">
+					<a href="{Permalink}" class="button">
+						{block:Date}<span>{DayOfMonthWithZero}</span>{ShortMonth}{/block:Date}
+					</a>
+				</article>					
+			</aside>
+			<!-- Close: date -->
+			
+			<!-- Open: content -->
+			<section class="content">				
+    			{block:Photo}                
+    				{LinkOpenTag}
+    					<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" class="photo" />
+    				{LinkCloseTag}
+    				{block:Caption}
+    					<div class="text">{Caption}</div>
+    				{/block:Caption}
+    			{/block:Photo}
+    			{block:Panorama}
+    				{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="highres" />{LinkCloseTag}				
+    				{block:Caption}
+    					<div class="text">{Caption}</div>
+    				{/block:Caption}
+    			{/block:Panorama}
+    			{block:Photoset}
+    				<div class="photoset">
+    					{block:Photos}
+    						<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" class="highres">
+    					{/block:Photos}
+    				</div>
+    				{block:Caption}
+    					<div class="text">{Caption}</div>
+    				{/block:Caption}
+    			{/block:Photoset}
+    			{block:Video}
+    				<p></p>
+    				<div class="video">{Video-700}</div>
+    				{block:Caption}
+    					<div class="text">{Caption}</div>
+    				{/block:Caption}
+    			{/block:Video}
+    			{block:Audio}
+    				<div class="audio">
+    					{AudioPlayerBlack}
+    				</div>
+    				<div class="audiocaption">{PlayCountWithLabel}</div>
+    				{block:Caption}
+    					<div class="text">{Caption}</div>
+    				{/block:Caption}
+    			{/block:Audio}
+    			{block:Quote}
+    				<a href="{Permalink}">
+    					<div class="quote">“{Quote}”</div>
+    				</a>
+    				{block:Source}
+    					<div class="text"><p>{Source}</p></div>
+    				{/block:Source}
+    			{/block:Quote}
+    			{block:Text}
+    				<a href="{Permalink}">
+    					{block:Title}
+    						<div class="title">{Title}</div>
+    					{/block:Title}
+    				</a>
+    				<div class="text">{Body}</div>
+    			{/block:Text}
+    			{block:Answer}
+    				<a href="{Permalink}">
+    					<div class="title">{Question}</div>
+    				</a>
+    				<div class="text">{Asker}</div>
+    				<div class="text">{Answer}</div>
+    			{/block:Answer}
+    			{block:Chat}	
+    				<a href="{Permalink}">
+    					{block:Title}
+    						<div class="title">{Title}</div>
+    					{/block:Title}
+    				</a>
+    				<div class="text">
+    					<p>
+    					{block:Lines}
+    						{block:Label}
+    							<strong>{Label}</strong>
+    						{/block:Label}
+    						{Line}<br />
+    					{/block:Lines}
+    					</p>
+    				</div>
+    			{/block:Chat}
+    			{block:Link}	
+    				<div class="title"><a href="{URL}">{Name}</a></div>
+    				{block:Description}
+    					<div class="text">{Description}</div>
+    				{/block:Description}
+    			{/block:Link}
+			    
+			    <!-- Post Footer -->
+				<footer class="details">
+					<ul class="clearfix">
+					{block:NoteCount}					
+						<li>
+							<a href="{Permalink}">{NoteCountWithLabel}</a>
+						</li>
+					{/block:NoteCount}
+					{block:ContentSource}
+						<li>
+							<a href="{SourceURL}">{lang:Source}: {block:SourceLogo}<img src="{BlackLogoURL}" width="{LogoWidth}" height="{LogoHeight}" alt="{SourceTitle}" />{/block:SourceLogo}{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo}</a>
+						</li>
+					{/block:ContentSource}
+					    <li class="reblogLikeButton">{ReblogButton}</li>
+                        <li class="reblogLikeButton">{LikeButton}</li>
+					</ul>
+				</footer>
+				
+				<!-- Notes -->
+			    {block:PostNotes}
+			        {PostNotes}
+			    {/block:PostNotes}
+			</section>
+			<!-- Close: content -->
+			
+		</article>
+		<!-- Close: post -->
+		
+		{block:PermalinkPage}
+		<div id="social">
+			<div class="social_links">
+				<div class="g-plusone" data-size="medium"></div>
+				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>				
+				<div class="fb-like" data-send="false" data-layout="button_count"></div>
+			</div>
+		</div>
+		<div id="postfooter">
+			{block:IfDisqusShortname}
+				{block:Permalink}
+					{block:Posts}
+						{block:Date}
+						<div id="disqus_thread"></div>
+						<script>
+							(function() {
+								var disqus_url = "{Permalink}";
+								var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";
+								var disqus_shortname = '{text:Disqus Shortname}';
+								var dsq = document.createElement('script');
+								dsq.type = 'text/javascript';
+								dsq.async = true;
+								dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+								(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+							})();
+						</script>
+						{/block:Date}
+					{/block:Posts}
+				{/block:Permalink}
+			{/block:IfDisqusShortname}
+		</div>
+		{/block:PermalinkPage}
+	{/block:Posts}
+	
+		<!-- Pagination -->
+		<div id="pagination">
+		
+		    {block:IfShowBlogsIFollow}
+		        {block:Following}
+		        <!-- Blogs I Follow -->
+    			<div class="following">
+    				<div class="title">{text:Following Section}</div>
+    				<ul class="clearfix">
+    					{block:Followed}
+    						<li>
+    							<a href="{FollowedURL}" target="_blank">
+    								<img src="{FollowedPortraitURL-48}" alt="{FollowedName}"/>
+    							</a>
+    						</li>
+    					{/block:Followed}
+    				</ul>
+    			</div>
+    			{/block:Following}
+    		{/block:IfShowBlogsIFollow}
+    		
+    		{block:Likes}
+    		<!-- Likes -->
+            <div class="likesContainer clearfix">
+                <div class="title">{text:Likes Section}</div>
+                {Likes limit="3" summarize="100" width="250"}
+            </div>
+            {/block:Likes}
+		
+			{block:Pagination}
+				{block:PreviousPage}<div class="prev"><a href="{PreviousPage}">&larr; Newer</a></div>{/block:PreviousPage}
+				{block:NextPage}<div class ="next"><a href="{NextPage}">Older &rarr;</a></div>{/block:NextPage}
+			{/block:Pagination}
+			{block:PermalinkPage}<div class="prev"><a href="/" title="{Title}">&larr; Back</a></div>{/block:PermalinkPage}
+		</div>
+	
+	    <!-- Open: footer -->
+		<footer class="developer">
+			Web Design by <a href="http://www.aljtmedia.com/">ALJT Media</a>
+		</footer>
+		<!-- Close: footer -->
+	</section> 
+	<!-- Close: main -->
+	   
+<!-- Disqus -->
+{block:PermalinkPage}
+	{block:IfDisqusShortname}
+	<script>
+		var disqus_shortname = '{text:Disqus Shortname}';
+		(function () {
+			var s = document.createElement('script'); s.async = true;
+			s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+			(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+		}());
+	</script>
+	{/block:IfDisqusShortname}
+	
+	<!-- Google Plusone -->
+	<script type="text/javascript">
+		(function() {
+			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			po.src = 'https://apis.google.com/js/plusone.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	})();
+	</script>
+	
+	<!-- Facebook Counts -->
+	<script>
+	(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/ca_EN/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+	
+	<!-- Twitter Share -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=true;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	
+	<div id="fb-root"></div>
+{/block:PermalinkPage}
+
+<!-- Google Analytics -->
+{block:IfGoogleAnalyticsID}
+<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', '{text:Google Analytics ID}']);
+	_gaq.push(['_trackPageview']);
+	(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+{/block:IfGoogleAnalyticsID}
+
+</body>
+</html>
