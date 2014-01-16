@@ -615,13 +615,15 @@
     			{/block:Following}
     		{/block:IfShowBlogsIFollow}
     		
-    		{block:Likes}
-    		<!-- Likes -->
-            <div class="likesContainer clearfix">
-                <div class="title">{text:Likes Section}</div>
-                {Likes limit="3" summarize="100" width="250"}
-            </div>
-            {/block:Likes}
+			{block:IfShowLikes}
+				{block:Likes}
+				<!-- Likes -->
+				<div class="likesContainer clearfix">
+					<div class="title">{text:Likes Section}</div>
+					{Likes limit="3" summarize="100" width="250"}
+				</div>
+				{/block:Likes}
+			{/block:IfShowLikes}
 		
 			{block:Pagination}
 				{block:PreviousPage}<div class="prev"><a href="{PreviousPage}">&larr; Newer</a></div>{/block:PreviousPage}
