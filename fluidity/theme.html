@@ -4,21 +4,21 @@
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-			
+
 	<!-- Title -->
 	<title>{block:PostTitle}{PostTitle} | {/block:PostTitle}{block:SearchPage}{lang:Search results for SearchQuery} | {/block:SearchPage}{Title}</title>
-	
+
 	<!-- Description -->
 	{block:Description}
-	
+
 <meta name="description" content="{MetaDescription}" />
 	{/block:Description}
-	
+
 	<!-- Fav and touch icons -->
 	<link rel="shortcut icon" href="{Favicon}" />
 	<link rel="apple-touch-icon" href="{PortraitURL-128}" />
-			
-	<!-- Meta -->       
+
+	<!-- Meta -->
 	<meta name="image:Logo 200x200" content="http://static.tumblr.com/1da4c0364d079cec028d813341a16432/mc0vkei/5mhmngveo/tumblr_static_logo-200.png" />
 	<meta name="image:Logo Retina 400x400" content="" />
 	<meta name="image:Background" content="" />
@@ -32,7 +32,7 @@
 	<meta name="color:Blog Name Colour" content="#282828" />
 	<meta name="color:Description Colour" content="#282828" />
 	<meta name="color:Link Colour" content="#43A8EF" />
-	<meta name="color:Hover Colour" content="#1e5d97" />		
+	<meta name="color:Hover Colour" content="#1e5d97" />
 	<meta name="color:Navigation Colour" content="#7f7f7f" />
 	<meta name="color:Text Colour" content="#282828" />
 	<meta name="color:Post Title Colour" content="#282828" />
@@ -47,7 +47,7 @@
 	<meta name="text:Pinterest URL" content="" />
 	<meta name="text:Twitter URL" content="" />
 	<meta name="text:YouTube URL" content="" />
-	<meta name="text:Website URL" content="" />	
+	<meta name="text:Website URL" content="" />
 	<meta name="text:Following Section" content="Blogs I Follow:" />
 	<meta name="text:Likes Section" content="My Likes:" />
 	<meta name="if:Show Social Network Icons" content="1" />
@@ -57,15 +57,15 @@
 	<meta name="if:Show Blog Title" content="1" />
 	<meta name="if:Centre Layout" content="1" />
 	<meta name="font:Body" content="Helvetica Neue" />
-	<meta name="font:Title" content="Gibson" />	
-	<meta name="select:Body Font Size" content="14px" title="Regular" />	
-	<meta name="select:Body Font Size" content="12px" title="Small" />        
+	<meta name="font:Title" content="Gibson" />
+	<meta name="select:Body Font Size" content="14px" title="Regular" />
+	<meta name="select:Body Font Size" content="12px" title="Small" />
 	<meta name="select:Body Font Size" content="16px" title="Large" />
 	<meta name="select:Title Font Weight" content="400" title="Normal" />
 	<meta name="select:Title Font Weight" content="700" title="Bold" />
 	<meta name="select:Header Position" content="top" title="Top" />
 	<meta name="select:Header Position" content="sidebar" title="Side" />
-	
+
 	<!-- Facebook Open Graph -->
 	<meta property="og:site_name" content="{Title}"/>
 	{block:PermalinkPage}
@@ -132,16 +132,16 @@
 		<meta property="og:type" content="blog"/>
 		<meta property="og:description" content="{MetaDescription}"/>
 		<meta property="og:image" content="{PortraitURL-128}"/>
-	{/block:IndexPage}      
-	  
+	{/block:IndexPage}
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="http://static.tumblr.com/mc0vkei/5CAmzeb8u/fluidity.css" />
-	
+
 	<!-- Canonical URL -->
 	{block:PermalinkPage}
 		<link rel="canonical" href="{Permalink}">
 	{/block:PermalinkPage}
-	
+
 	<!-- Custom CSS -->
 	<style>
 		body {
@@ -156,7 +156,7 @@
 			color: {color:Link Colour};
 		}
 		a:hover {
-			color: {color:Hover Colour};  
+			color: {color:Hover Colour};
 		}
 		h1, h2, h3, h4 {
 			font-family: {font:Title};
@@ -173,7 +173,7 @@
 		}
 		header.globalHeader .description a {
 			color: {color:Link Colour};
-		}			
+		}
 		header.globalHeader .description a:hover {
 			background-color: {color:Hover Colour};
 		}
@@ -196,15 +196,15 @@
 		#main article.post .content ol.notes li.note {
 	        border-top: 1px solid {color:Border Colour};
 		}
-		#main article.post .date a, 
+		#main article.post .date a,
 		#main article.post .date a:visited {
 			color: {color:Button Text Colour};
 			background: {color:Button Colour};
-		}			
+		}
 		#main article.post .date a:hover {
 			color: {color:Button Hover Text Colour};
 			background: {color:Button Hover Colour};
-		}			
+		}
 		header.globalHeader .description,
 		header.globalHeader .pageNavigation,
 		header.globalHeader .pageNavigation a,
@@ -216,18 +216,18 @@
 		#main article.post .content .text img {
 			background-image: url("{PhotoURL-HighRes}");
 		}
-		#main article.post .content .text a, 
+		#main article.post .content .text a,
 		#main article.post .content .text a:visited {
 			color: {color:Link Colour};
 		}
 		#main footer.developer a:hover,
-		#main article.post .content .text a:hover {	
-			color: {color:Hover Colour};  
+		#main article.post .content .text a:hover {
+			color: {color:Hover Colour};
 		}
 		#main article.post .content .text h2 {
 			color: {color:Navigation Colour};
-		}			
-		#main article.post .content .text h2 a, 
+		}
+		#main article.post .content .text h2 a,
 		#main article.post .content .text h2 a:visited {
 			color: {color:Navigation Colour};
 		}
@@ -258,27 +258,27 @@
 		#main article.post .content footer.details ul li a:hover {
 			color: {color:Hover Colour};
 		}
-		#pagination .prev a, 
+		#pagination .prev a,
 		#pagination .next a {
 			background: {color:Button Colour};
 			color: {color:Button Text Colour};
 		}
-		#pagination .prev a:hover, 
+		#pagination .prev a:hover,
 		#pagination .next a:hover {
 			background: {color:Button Hover Colour};
 			color: {color:Button Hover Text Colour};
-		}	
-		.button { 
-			background-color: {color:Button Colour}; 
 		}
-		.button:hover { 
-			background-color: {color:Button Hover Colour}; 
+		.button {
+			background-color: {color:Button Colour};
+		}
+		.button:hover {
+			background-color: {color:Button Hover Colour};
 		}
 		{block:IfCentreLayout}
 		body.page-sidebar {
 		    margin: 0 0 0 300px;
 		}
-		body.page-sidebar header.globalHeader.sidebar { 
+		body.page-sidebar header.globalHeader.sidebar {
 		    left: 0;
 		}
 		body.page-sidebar #main {
@@ -288,31 +288,31 @@
         	font-weight: {select:Title Font Weight};
         }
 		{/block:ifCentreLayout}
-		
-		/* Retina Displays ----------- */ 
-		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+
+		/* Retina Displays ----------- */
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 			header.globalHeader .logo .image {
 				background-image: url("{image:Logo Retina 400x400}");
 			}
-		}			
+		}
 		{CustomCSS}
 	</style>
 </head>
-<body class="page-{select:Header Position}">        
-	        
+<body class="page-{select:Header Position}">
+
 	<!-- Global Header -->
 	<header class="globalHeader {select:Header Position}">
-	
+
 	    <!-- Logo -->
 		<div class="logo">
 			<a href="/" title="{Title}">
 				<div class="image">&nbsp;</div>
 			</a>
 		</div>
-		
+
 		<!-- Main Content -->
 		<aside class="content">
-		    
+
 		    <!-- Blog Title -->
 		    {block:IfShowBlogTitle}
 		    <div class="title">
@@ -321,12 +321,12 @@
     			</a>
 			</div>
 			{/block:IfShowBlogTitle}
-			
+
 			<!-- Blog Description -->
     		<div class="description">
     			{Description}
     		</div>
-    		
+
     		<!-- Page Navigation -->
     		<nav class="pageNavigation">
     	        <ul class="clearfix">
@@ -335,7 +335,7 @@
     			{block:SubmissionsEnabled}<li><a href="/submit">{SubmitLabel}</a></li>{/block:SubmissionsEnabled}
     			</ul>
     		</nav>
-    		
+
     		<!-- Links -->
     		<div class="feature clearfix">
     			{block:IfShowSocialNetworkIcons}
@@ -346,14 +346,14 @@
     						<span class="asset">About.me</span>
     					</a>
     				</li>
-    				{/block:IfAboutMeURL}					
+    				{/block:IfAboutMeURL}
     				{block:IfFacebookURL}
     				<li class="service facebook">
     					<a class="icon button" href="{text:Facebook URL}" target="_blank" title="Facebook">
     						<span class="asset">Facebook</span>
     					</a>
     				</li>
-    				{/block:IfFacebookURL}			
+    				{/block:IfFacebookURL}
     				{block:IfGooglePlusURL}
     				<li class="service googleplus">
     					<a class="icon button" href="{text:Google Plus URL}" target="_blank" title="Google+">
@@ -367,7 +367,7 @@
     						<span class="asset">Instagram</span>
     					</a>
     				</li>
-    				{/block:IfInstagramURL}					
+    				{/block:IfInstagramURL}
     				{block:IfLinkedInURL}
     				<li class="service linkedin">
     					<a class="icon button" href="{text:LinkedIn URL}" target="_blank" title="LinkedIn">
@@ -381,14 +381,14 @@
     						<span class="asset">Pinterest</span>
     					</a>
     				</li>
-    				{/block:IfPinterestURL}					
+    				{/block:IfPinterestURL}
     				{block:IfTwitterURL}
     				<li class="service twitter">
     					<a class="icon button" href="{text:Twitter URL}" target="_blank" title="Twitter">
     						<span class="asset">Twitter</span>
     					</a>
     				</li>
-    				{/block:IfTwitterURL}					
+    				{/block:IfTwitterURL}
     				{block:IfYouTubeURL}
     				<li class="service youtube">
     					<a class="icon button" href="{text:YouTube URL}" target="_blank" title="YouTube">
@@ -408,7 +408,7 @@
     		</div>
     	</aside>
 	</header>
-		
+
 	<!-- Open: main -->
 	<section id="main">
 	{block:SearchPage}
@@ -426,10 +426,10 @@
     	   </section>
 	   </article>
 	{/block:SearchPage}
-	  
+
 	{block:Posts}
 		<article class="post clearfix">
-			
+
 			<!-- Open: date -->
 			<aside class="date">
 				<a href="{Permalink}" class="show-for-small">
@@ -439,13 +439,13 @@
 					<a href="{Permalink}" class="button">
 						{block:Date}<span>{DayOfMonthWithZero}</span>{ShortMonth}{/block:Date}
 					</a>
-				</article>					
+				</article>
 			</aside>
 			<!-- Close: date -->
-			
+
 			<!-- Open: content -->
-			<section class="content">				
-    			{block:Photo}                
+			<section class="content">
+    			{block:Photo}
     				{LinkOpenTag}
     					<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}" class="photo" />
     				{LinkCloseTag}
@@ -454,7 +454,7 @@
     				{/block:Caption}
     			{/block:Photo}
     			{block:Panorama}
-    				{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="highres" />{LinkCloseTag}				
+    				{LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="highres" />{LinkCloseTag}
     				{block:Caption}
     					<div class="text">{Caption}</div>
     				{/block:Caption}
@@ -508,7 +508,7 @@
     				<div class="text">{Asker}</div>
     				<div class="text">{Answer}</div>
     			{/block:Answer}
-    			{block:Chat}	
+    			{block:Chat}
     				<a href="{Permalink}">
     					{block:Title}
     						<div class="title">{Title}</div>
@@ -525,17 +525,17 @@
     					</p>
     				</div>
     			{/block:Chat}
-    			{block:Link}	
+    			{block:Link}
     				<div class="title"><a href="{URL}">{Name}</a></div>
     				{block:Description}
     					<div class="text">{Description}</div>
     				{/block:Description}
     			{/block:Link}
-			    
+
 			    <!-- Post Footer -->
 				<footer class="details">
 					<ul class="clearfix">
-					{block:NoteCount}					
+					{block:NoteCount}
 						<li>
 							<a href="{Permalink}">{NoteCountWithLabel}</a>
 						</li>
@@ -549,22 +549,22 @@
                         <li class="reblogLikeButton">{LikeButton}</li>
 					</ul>
 				</footer>
-				
+
 				<!-- Notes -->
 			    {block:PostNotes}
 			        {PostNotes}
 			    {/block:PostNotes}
 			</section>
 			<!-- Close: content -->
-			
+
 		</article>
 		<!-- Close: post -->
-		
+
 		{block:PermalinkPage}
 		<div id="social">
 			<div class="social_links">
 				<div class="g-plusone" data-size="medium"></div>
-				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>				
+				<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 				<div class="fb-like" data-send="false" data-layout="button_count"></div>
 			</div>
 		</div>
@@ -593,10 +593,10 @@
 		</div>
 		{/block:PermalinkPage}
 	{/block:Posts}
-	
+
 		<!-- Pagination -->
 		<div id="pagination">
-		
+
 		    {block:IfShowBlogsIFollow}
 		        {block:Following}
 		        <!-- Blogs I Follow -->
@@ -614,7 +614,7 @@
     			</div>
     			{/block:Following}
     		{/block:IfShowBlogsIFollow}
-    		
+
 			{block:IfShowLikes}
 				{block:Likes}
 				<!-- Likes -->
@@ -624,22 +624,22 @@
 				</div>
 				{/block:Likes}
 			{/block:IfShowLikes}
-		
+
 			{block:Pagination}
 				{block:PreviousPage}<div class="prev"><a href="{PreviousPage}">&larr; Newer</a></div>{/block:PreviousPage}
 				{block:NextPage}<div class ="next"><a href="{NextPage}">Older &rarr;</a></div>{/block:NextPage}
 			{/block:Pagination}
 			{block:PermalinkPage}<div class="prev"><a href="/" title="{Title}">&larr; Back</a></div>{/block:PermalinkPage}
 		</div>
-	
+
 	    <!-- Open: footer -->
 		<footer class="developer">
-			Web Design by <a href="http://www.aljtmedia.com/">ALJT Media</a>
+			Tumblr Theme <a href="http://www.madebymagnitude.com/">Made by Magnitude</a>
 		</footer>
 		<!-- Close: footer -->
-	</section> 
+	</section>
 	<!-- Close: main -->
-	   
+
 <!-- Disqus -->
 {block:PermalinkPage}
 	{block:IfDisqusShortname}
@@ -652,7 +652,7 @@
 		}());
 	</script>
 	{/block:IfDisqusShortname}
-	
+
 	<!-- Google Plusone -->
 	<script type="text/javascript">
 		(function() {
@@ -661,7 +661,7 @@
 			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 	})();
 	</script>
-	
+
 	<!-- Facebook Counts -->
 	<script>
 	(function(d, s, id) {
@@ -672,10 +672,10 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));
 	</script>
-	
+
 	<!-- Twitter Share -->
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=true;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	
+
 	<div id="fb-root"></div>
 {/block:PermalinkPage}
 
